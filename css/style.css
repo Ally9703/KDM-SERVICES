@@ -11,7 +11,7 @@
   text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
-  --couleur-primaire:#5e8eb3;
+  --couleur-primaire:#66ccff;
 }
 
 html {
