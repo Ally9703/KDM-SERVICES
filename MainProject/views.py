@@ -1,5 +1,4 @@
 from django.shortcuts import render
 
-
-def lien(request):
+def shop_view(request):
     return render(request, 'base.html')
