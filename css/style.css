@@ -12,11 +12,16 @@
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   
+  /* Definitions des couleurs  */
   --couleur-primaire:#000033;
-  --couleur-secondaire :
-  /*--couleur-primaire:#66ccff;*/
-  --couleur-quatre  : #000033;
+  --couleur-secondaire : #eee;
+  --couleur-tairtier:#66ccff;
+  --couleur-quatre  : #cc3300;
+  --couleur-blue : #0984e3;
+  --couleur-noir:#333;
+  --couleur-blanc:#fff;
 }
+
 
 html {
   overflow-x: hidden;
@@ -28,18 +33,18 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  /*background: #eee;*/
-  background: #eee;
+  
+  background:var(--couleur-secondaire);
 }
 
 html::-webkit-scrollbar-thumb {
-  /* background: #0984e3; */
+
   background: var(--couleur-primaire);
   border-radius: 5rem;
 }
 
 body {
-  background: #eee;
+  background:var(--couleur-secondaire);
 }
 
 section {
@@ -50,11 +55,11 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 3.5rem;
-  color: #333;
+  color:var(--couleur-noir);
 }
 
 .heading span {
-  color: #0984e3;
+  color: var(--couleur-primaire);
 }
 
 .btn {
@@ -63,13 +68,13 @@ section {
   border-radius: .5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: #fff;
+  color:var(--couleur-blanc);
   cursor: pointer;
-  background: #0984e3;
+  background: var(--couleur-primaire);
 }
 
 .btn:hover {
-  background: #333;
+  background:var(--couleur-blue);
 }
 
 @-webkit-keyframes fadeIn {
@@ -95,7 +100,6 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  /* background: #0984e3; */
   background: var(--couleur-primaire);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,7 +134,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: var(--couleur-secondaire);
 }
 
 .header .search-form input {
@@ -174,7 +178,7 @@ section {
   left: -110%;
   height: 100%;
   width: 30rem;
-  background: #fff;
+  background:var(--couleur-secondaire);
   z-index: 10000;
 }
 
@@ -254,7 +258,7 @@ section {
 }
 
 .home {
-  background: #fff;
+  background: var(--couleur-blanc);
 }
 
 .home .slide {

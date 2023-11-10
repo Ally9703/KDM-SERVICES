@@ -87,7 +87,7 @@
               justify-content: center;
     }
     .header .logo {
-      display: none;
+      display: block;
     }
     .header .icons a,
     .header .icons div {
