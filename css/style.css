@@ -323,7 +323,7 @@ section {
   border: 0.2rem solid #333;
   border-radius: .5rem;
   overflow: hidden;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(203, 65, 65, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
@@ -341,10 +341,10 @@ section {
 
 .banner .box-container .box .content {
   position: absolute;
-  top: 50%;
-  left: 5%;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
+  top: 20%;
+  left: 3%;
+  -webkit-transform: translateY(-10%) rotate(10deg);
+          transform: translateY(-10%) rotate(10deg);
 }
 
 .banner .box-container .box .content span {
