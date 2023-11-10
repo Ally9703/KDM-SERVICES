@@ -11,7 +11,9 @@
   text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  
   --couleur-primaire:#000033;
+  --couleur-secondaire :
   /*--couleur-primaire:#66ccff;*/
   --couleur-quatre  : #000033;
 }
