@@ -5,12 +5,23 @@
     .header {
       padding: 2rem;
     }
+    #responsive{
+      display: block;
+    }
+    
+    #large{
+      display: none;
+    }
+   
+   
+
     section {
       padding: 3rem 2rem;
     }
   }
   
   @media (max-width: 991px) {
+   
     .quick-links {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -42,6 +53,8 @@
     #search-btn {
       display: inline-block;
     }
+
+   
     .header .search-form {
       position: absolute;
       top: 99%;
@@ -84,8 +97,10 @@
     .header {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center;
+              justify-content: space-between;
     }
+    
+   
     .header .logo {
       display: block;
     }

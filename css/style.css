@@ -47,6 +47,14 @@ body {
   background:var(--couleur-secondaire);
 }
 
+#responsive{
+  display: none;
+}
+
+#large{
+  display: block;
+}
+
 section {
   padding: 3rem 9%;
 }

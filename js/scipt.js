@@ -4,6 +4,10 @@ document.querySelector('#menu-btn').onclick = () =>{
     sideBar.classList.toggle('active');
 }
 
+document.querySelector('#menu-bouton').onclick = () =>{
+    sideBar.classList.toggle('active');
+}
+
 document.querySelector('#close-side-bar').onclick = () =>{
     sideBar.classList.remove('active');
 }
