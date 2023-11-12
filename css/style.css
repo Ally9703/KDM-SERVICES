@@ -55,6 +55,10 @@ body {
   display: block;
 }
 
+#shop{
+  display: none;
+}
+
 section {
   padding: 3rem 9%;
 }
