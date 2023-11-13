@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Ajout manuel 
     'shop',  
+    'compressor',
 ]
 
 
@@ -119,9 +122,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
+
+"""STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
-]
+]"""
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/') 
+STATICFILES_FINDERS =( 'django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compressor.finders.CompressorFinder', 
+)
+COMPRESS_PRECOMPILERS = (     
+    ('text/x-scss', 'django_libsass.SassCompiler'), 
+)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -131,3 +142,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Pour la confuguration du sass dans django
+"""
+    pip install django==3.2 
+    pip install django-compressor==2.4 
+    pip install django-libsass==0.8 
+    liste de pip
+
+"""

@@ -1,0 +1,82 @@
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    
+    background:var(--couleur-secondaire);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+  
+    background: var(--couleur-primaire);
+    border-radius: 5rem;
+  }
+  
+  body {
+    background:var(--couleur-secondaire);
+  }
+  
+  #responsive{
+    display: none;
+  }
+  
+  #large{
+    display: block;
+  }
+  
+  #shop{
+    display: none;
+  }
+  
+  section {
+    padding: 3rem 9%;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    color:var(--couleur-noir);
+  }
+  
+  .heading span {
+    color: var(--couleur-primaire);
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color:var(--couleur-blanc);
+    cursor: pointer;
+    background: var(--couleur-primaire);
+  }
+  
+  .btn:hover {
+    background:var(--couleur-blue);
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      opacity: 0;
+    }
+  }
+  
