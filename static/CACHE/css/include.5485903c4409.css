@@ -12,6 +12,7 @@
   text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   /* Definitions des couleurs  */
   --couleur-primaire:#000033;
   --couleur-secondaire: #eee;
@@ -22,6 +23,20 @@
   --couleur-blanc:#fff; }
 
 /* line 1, static/main/_body.scss */
+=======
+  
+  /* Definitions des couleurs  */
+  --couleur-primaire:#000033;
+  --couleur-secondaire : #eee;
+  --couleur-tairtier:#66ccff;
+  --couleur-quatre  : #cc3300;
+  --couleur-blue : #0984e3;
+  --couleur-noir:#333;
+  --couleur-blanc:#fff;
+}
+
+
+>>>>>>> origin:css/style.css
 html {
   overflow-x: hidden;
   font-size: 62.5%; }
@@ -32,16 +47,31 @@ html::-webkit-scrollbar {
 
 /* line 10, static/main/_body.scss */
 html::-webkit-scrollbar-track {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   background: var(--couleur-secondaire); }
+=======
+  
+  background:var(--couleur-secondaire);
+}
+>>>>>>> origin:css/style.css
 
 /* line 15, static/main/_body.scss */
 html::-webkit-scrollbar-thumb {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
+=======
+
+>>>>>>> origin:css/style.css
   background: var(--couleur-primaire);
   border-radius: 5rem; }
 
 /* line 21, static/main/_body.scss */
 body {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   background: var(--couleur-secondaire); }
+=======
+  background:var(--couleur-secondaire);
+}
+>>>>>>> origin:css/style.css
 
 /* line 25, static/main/_body.scss */
 #responsive {
@@ -64,11 +94,21 @@ section {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 3.5rem;
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   color: var(--couleur-noir); }
+=======
+  color:var(--couleur-noir);
+}
+>>>>>>> origin:css/style.css
 
 /* line 48, static/main/_body.scss */
 .heading span {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   color: var(--couleur-primaire); }
+=======
+  color: var(--couleur-primaire);
+}
+>>>>>>> origin:css/style.css
 
 /* line 52, static/main/_body.scss */
 .btn {
@@ -77,13 +117,25 @@ section {
   border-radius: .5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   color: var(--couleur-blanc);
   cursor: pointer;
   background: var(--couleur-primaire); }
+=======
+  color:var(--couleur-blanc);
+  cursor: pointer;
+  background: var(--couleur-primaire);
+}
+>>>>>>> origin:css/style.css
 
 /* line 63, static/main/_body.scss */
 .btn:hover {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   background: var(--couleur-blue); }
+=======
+  background:var(--couleur-blue);
+}
+>>>>>>> origin:css/style.css
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -137,9 +189,16 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   -ms-flex-align: center;
   align-items: center;
   background: var(--couleur-secondaire); }
+=======
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--couleur-secondaire);
+}
+>>>>>>> origin:css/style.css
 
 /* line 45, static/main/_header.scss */
 .header .search-form input {
@@ -183,8 +242,14 @@ section {
   left: -110%;
   height: 100%;
   width: 30rem;
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   background: var(--couleur-secondaire);
   z-index: 10000; }
+=======
+  background:var(--couleur-secondaire);
+  z-index: 10000;
+}
+>>>>>>> origin:css/style.css
 
 /* line 15, static/main/_navbar.scss */
 .side-bar.active {
@@ -263,7 +328,12 @@ section {
 
 /* line 1, static/main/_home.scss */
 .home {
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
   background: var(--couleur-blanc); }
+=======
+  background: var(--couleur-blanc);
+}
+>>>>>>> origin:css/style.css
 
 /* line 5, static/main/_home.scss */
 .home .slide {
@@ -313,9 +383,60 @@ section {
   font-size: 3rem;
   color: #333; }
 
+<<<<<<< HEAD:static/CACHE/css/include.5485903c4409.css
 /* line 12, static/main/include.scss */
 .arrivals h1 span {
   color: red; }
+=======
+.banner .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+
+.banner .box-container .box {
+  position: relative;
+  height: 25rem;
+  border: 0.2rem solid #333;
+  border-radius: .5rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(203, 65, 65, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.banner .box-container .box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.banner .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner .box-container .box .content {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  -webkit-transform: translateY(-10%) rotate(10deg);
+          transform: translateY(-10%) rotate(10deg);
+}
+
+.banner .box-container .box .content span {
+  font-size: 1.7rem;
+  color: #0984e3;
+}
+
+.banner .box-container .box .content h3 {
+  font-size: 2rem;
+  padding: .5rem 0;
+  color: #333;
+}
+>>>>>>> origin:css/style.css
 
 /* line 16, static/main/include.scss */
 .arrivals .box-container {
