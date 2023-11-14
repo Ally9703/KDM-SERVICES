@@ -336,6 +336,10 @@ section {
   gap: 2rem;
 }
 
+.banner span{
+  color: red;
+}
+
 .banner .box-container .box {
   position: relative;
   height: 35rem;
@@ -360,10 +364,15 @@ section {
 
 .banner .box-container .box .content {
   position: absolute;
-  top: 63%;
+  top: 55%;
   left: 1%;
   /* -webkit-transform: translateY(-10%) rotate(10deg);
           transform: translateY(-10%) rotate(10deg); */
+}
+
+.banner .box-container .box .content h2 {
+  color: red; 
+  font-size: 2rem;
 }
 
 .banner .box-container .box .content span {
@@ -376,6 +385,10 @@ section {
   padding: .5rem 0;
   color: #333;
 } 
+
+.arrivals h1 span{
+  color: red;
+}
 
 .arrivals .box-container {
   display: -ms-grid;
@@ -483,6 +496,8 @@ section {
   padding: 1rem 0;
   line-height: 2;
 }
+
+/* Faire la suite ici */
 
 .faq .accordion-container {
   max-width: 70rem;
