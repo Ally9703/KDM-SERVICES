@@ -8,9 +8,25 @@ import json
 # vue principale Page d'accueil Affichage des produits
 def shop(request, *args, **kwargs):
     produits = Produit.objects.all()
-    context={
+    if request.user.is_authenticated:
+        client = request.user.client
+        commande, created = Commande.objects.get_or_create(client=client, complete=False)
+        nombre_article = commande.get_panier_article
+
+    else:
+        articles = []
+        commande = {
+            'get_panier_total':0,
+            'get_panier_article':0
+        }
+        nombre_article = commande['get_panier_article']
+
+    context = {
+        
+        'nombre_article': nombre_article,
         'produits':produits
     }
+    
     return render(request, 'shop/index.html', context)
 
 
@@ -21,6 +37,7 @@ def panier(request, *args, **kwargs):
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
         articles = commande.commandearticle_set.all()
+        nombre_article = commande.get_panier_article
 
     else:
         articles = []
@@ -28,10 +45,12 @@ def panier(request, *args, **kwargs):
             'get_panier_total':0,
             'get_panier_article':0
         }
+        nombre_article = commande['get_panier_article']
 
     context = {
         'articles':articles,
-        'commande':commande
+        'commande':commande,
+        'nombre_article':nombre_article
     }
     return render(request, 'shop/panier.html', context)
 
@@ -42,6 +61,7 @@ def commande(request, *args, **kwargs):
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
         articles = commande.commandearticle_set.all()
+        nombre_article = commande.get_panier_article
 
     else:
         articles = []
@@ -49,11 +69,14 @@ def commande(request, *args, **kwargs):
             'get_panier_total':0,
             'get_panier_article':0
         }
+        nombre_article = commande['get_panier_article']
 
     context = {
         'articles':articles,
-        'commande':commande
+        'commande':commande,
+        'nombre_article': nombre_article
     }
+
     return render(request, 'shop/commande.html', context)
 
 
