@@ -9,7 +9,7 @@ for (var i = 0; i < produitBtns.length; i++){
         var action = this.dataset.action;
 
         if (user === "AnonymousUser"){
-            addCookieArticle(produitId, action);
+            console.log(produitId, action);
         }else{
             updateUserCommande(produitId, action);
         }
@@ -17,31 +17,6 @@ for (var i = 0; i < produitBtns.length; i++){
 
 }
 
-
-function addCookieArticle(produitId, action){
-    console.log("l'utilisateur n'est pas authentifie");
-
-    if(action == "add"){
-        if(panier[produitId] == undefined){
-            panier[produitId] = {"qte":1};
-        }else{
-            panier[produitId]["qte"] += 1;
-        }
-    }
-
-    if(action == "remove"){
-        panier[produitId]["qte"] -= 1;
-        if( panier[produitId]["qte"] <= 0){
-            delete panier[produitId];
-        }
-    }
-
-
-    document.cookie = "panier=" + JSON.stringify(panier) + ";domain=;path=/";
-
-    console.log(panier);
-    location.reload();
-}
 
 function updateUserCommande(produitId, action){
 
@@ -62,6 +37,6 @@ function updateUserCommande(produitId, action){
 
     .then((data) => {
         console.log('data', data);
-        location.reload();
+        
     })
 }
