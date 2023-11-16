@@ -59,12 +59,13 @@ class Commande(models.Model):
     def __str__(self):
         return str(self.id)  
 
-    """@property
+    # Savoir si nous avons au moins un produit physique
+    @property
     def produit_physique(self):
-        # savoir si nous avons au moins un produit physique
         articlecommande = self.commandearticle_set.all()
         physique = any(article.produit.digital==False for article in articlecommande)
-        return physique"""
+        return physique
+    
         
     # Somme total des articles dans le panier
     @property 

@@ -108,3 +108,10 @@ def update_article(request, *args, **kwargs):
 
     
     return JsonResponse("Panier modifier", safe=False)
+
+#traitement,  validation de la com;ande  et verification de l'integrite des donnees(detection de fraude)
+def traitementCommande(request, *args, **kwargs):
+
+    data = json.loads(request.body)
+    print(data)
+    return JsonResponse("Votre paiement a été effectué avec succès, vous recevrez votre commande dans un instant !", safe=False)

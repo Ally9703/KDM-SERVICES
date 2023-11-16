@@ -12,5 +12,5 @@ urlpatterns = [
 
     path('update_article/', views.update_article, name='update_article'),
 
-    #path('traitement_commande/', views.traitementCommande, name="traitement_commande")
+    path('traitement_commande/', views.traitementCommande, name="traitement_commande"),
 ]
