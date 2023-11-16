@@ -31,7 +31,7 @@ class Produit(models.Model):
     date_ajout = models.DateTimeField(default=timezone.now)
 
 
-    # Gestion d'affichage dans l'ordre 
+    # Gestion d'affichage dans l'ordre d'ajout
     class Meta:
         ordering = ['-date_ajout']
 
