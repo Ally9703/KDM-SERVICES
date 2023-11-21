@@ -1,0 +1,29 @@
+/* L'importation de fichier scss (DESIGN) */
+/* L'importation de fichier scss (DESIGN) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+/* line 2, static/main/_variables.scss */
+/* line 4, static/main/_variable.scss */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  /* Definitions des couleurs  */
+  --couleur-primaire:#000033;
+  --couleur-secondaire: #eee;
+  --couleur-tairtier:#66ccff;
+  --couleur-quatre: #cc3300;
+  --couleur-blue: #0984e3;
+  --couleur-noir:#333;
+  --couleur-blanc:#fff; }
+
+/* line 1, static/main/_body.scss */
+h1 {
+  color: var(--couleur-quatre); }
