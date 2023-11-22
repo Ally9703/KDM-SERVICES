@@ -125,31 +125,3 @@ def commandeAnonyme(request, data):
         )
 
     return client, commande
-
-def data_cookie(request):
-
-    if request.user.is_authenticated:
-
-        client = request.user.client
-
-        commande, created = Commande.objects.get_or_create(client=client, complete=False)
-
-        articles = commande.commandearticle_set.all()
-
-   
-        nombre_article = commande.get_panier_article
-
-    else:
-        
-        cookie_panier = panier_cookie(request)
-        articles = cookie_panier['articles']
-        commande = cookie_panier['commande']
-        nombre_article = cookie_panier['nombre_article']
-
-    context = {
-        'articles': articles,
-        'commande': commande,
-        'nombre_article': nombre_article
-    }
-
-    return context

@@ -28,6 +28,6 @@ admin.site.register(Commande, CommandeModelAdmin)
 admin.site.register(CommandeArticle, CommandeArticleModelAdmin)
 admin.site.register(AddressChipping, AddressChippingModelAdmin)
 
-admin.site.site_title = "KDM BUSINESS"
-admin.site.site_header = "KDM BUSINESS"
-admin.site.index_title = "KDM BUSINESS"
+admin.site.site_title = "DASHBOARD KDM BUSINESS"
+admin.site.site_header = "DASHBOARD KDM BUSINESS"
+admin.site.index_title = "DASHBOARD KDM BUSINESS"

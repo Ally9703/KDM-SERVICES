@@ -1,50 +1,50 @@
 var produitBtns = document.getElementsByClassName('update-panier');
 
-for (var i = 0; i < produitBtns.length; i++) {
+for (var i = 0; i < produitBtns.length; i++){
 
-    produitBtns[i].addEventListener('click', function () {
+    produitBtns[i].addEventListener('click', function(){
 
-        var produitId = this.dataset.produit;
+        var produitId  = this.dataset.produit;
 
-        var action = this.dataset.action;
+        var action     = this.dataset.action;
 
-        if (user === "AnonymousUser") {
-            //console.log(produitId, action);
+        if (user === "AnonymousUser"){
             addCookieArticle(produitId, action);
-        } else {
+            //console.log(produitId, action);
+        }else{
             updateUserCommande(produitId, action);
         }
     })
-    
-    
+
 }
 
-function addCookieArticle(produitId, action) {
+
+function addCookieArticle(produitId, action){
     console.log("l'utilisateur n'est pas authentifie");
 
-    if (action == "add") {
-        if (panier[produitId] == undefined) {
-            panier[produitId] = { "qte": 1 };
-        } else {
+    if(action == "add"){
+        if(panier[produitId] == undefined){
+            panier[produitId] = {"qte":1};
+        }else{
             panier[produitId]["qte"] += 1;
         }
     }
 
-    if (action == "remove") {
+    if(action == "remove"){
         panier[produitId]["qte"] -= 1;
-        if (panier[produitId]["qte"] <= 0) {
+        if( panier[produitId]["qte"] <= 0){
             delete panier[produitId];
         }
     }
 
+
     document.cookie = "panier=" + JSON.stringify(panier) + ";domain=;path=/";
-    console(panier);
+
+    console.log(panier);
     location.reload();
 }
 
-
-
-function updateUserCommande(produitId, action) {
+function updateUserCommande(produitId, action){
 
     var url = '/update_article/';
 
@@ -54,7 +54,7 @@ function updateUserCommande(produitId, action) {
             'Content-Type': 'application/json',
             'X-CSRFToken': csrftoken
         },
-        body: JSON.stringify({ "produit_id": produitId, "action": action })
+        body: JSON.stringify({"produit_id": produitId, "action": action})
     })
 
     .then((response) => {
