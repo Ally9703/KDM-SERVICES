@@ -28,16 +28,17 @@ class Produit(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     digital = models.BooleanField(default=False, null=True, blank=True)
     image = models.ImageField(upload_to='shop', null=True, blank=True)
-    date_ajout = models.DateTimeField(default=timezone.now)
+    date_ajout = models.DateTimeField(auto_now_add=True)
 
 
     # Gestion d'affichage dans l'ordre d'ajout
     class Meta:
         ordering = ['-date_ajout']
 
-    # Gestion des produits sans images
     def __str__(self):
         return self.name 
+    
+    # Ajout et gestiion des produits sans images
     @property
     def imageUrl(self):
         try:
@@ -103,7 +104,6 @@ class AddressChipping(models.Model):
     ville = models.CharField(max_length=100, null=True)
     zipcode = models.CharField(max_length=100, null=True)
     date_ajout =  models.DateTimeField(auto_now_add=True)
-
 
     def __str__(self):
         return self.addresse
