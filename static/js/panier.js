@@ -9,12 +9,37 @@ for (var i = 0; i < produitBtns.length; i++){
         var action     = this.dataset.action;
 
         if(user=="AnonymousUser"){
-            console.log("Utilisateur anonyme");
+            // console.log("Utilisateur anonyme");
+            addCookieArticle(produitId, action);
         }
         else{
             updateUserCommande(produitId, action);
         } 
     })
+
+    function addCookieArticle(produitId, action){
+        console.log("l'utilisateur anonyme ");
+    
+        if(action == "add"){
+            if(panier[produitId] == undefined){
+                panier[produitId] = {"qte":1};
+            }else{
+                panier[produitId]["qte"] += 1;
+            }
+        }
+    
+        if(action == "remove"){
+            panier[produitId]["qte"] -= 1;
+            if( panier[produitId]["qte"] <= 0){
+                delete panier[produitId];
+            }
+        }
+    
+        document.cookie = "panier=" + JSON.stringify(panier) + ";domain=;path=/";
+    
+        console.log(panier);
+        location.reload();
+    }
 
     function updateUserCommande(produit, action){
 
@@ -36,6 +61,7 @@ for (var i = 0; i < produitBtns.length; i++){
 
         .then((data) =>{
             console.log('data', data);
+            location.reload();
         })
     }
 }
