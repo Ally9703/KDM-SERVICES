@@ -8,7 +8,7 @@ for (var i = 0; i < produitBtns.length; i++){
         var produitId  = this.dataset.produit;
         var action     = this.dataset.action;
 
-        if(user=="AnonymousUser"){
+        if( user == "AnonymousUser" ){
             // console.log("Utilisateur anonyme");
             addCookieArticle(produitId, action);
         }

@@ -14,6 +14,7 @@ def shop(request, *args, **kwargs):
     if request.user.is_authenticated:
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
+        #articles = commande.commandearticle_set.all()
         nombre_article = commande.get_panier_article
             
     else:
@@ -30,7 +31,7 @@ def shop(request, *args, **kwargs):
             panier = json.loads(request.COOKIES.get('panier'))
             for obj in panier:
                 nombre_article += panier[obj]['qte']
-                
+               
         except:
 
             panier = {}
@@ -72,7 +73,7 @@ def panier(request, *args, **kwargs):
         for obj in panier:
             nombre_article += panier[obj]['qte']
             produit = Produit.objects.get(id=obj)
-            total   += produit.price * panier[obj]['qte']
+            total   = produit.price * panier[obj]['qte']
             commande['get_panier_article'] += panier[obj]['qte']
             commande['get_panier_total'] += total
 
@@ -83,7 +84,7 @@ def panier(request, *args, **kwargs):
                     'price':produit.price,
                     'imageUrl':produit.imageUrl
                 },
-
+                
                 'quantite': panier[obj]['qte'],
                 'get_total': total
             }
@@ -129,7 +130,7 @@ def commande(request, *args, **kwargs):
         for obj in panier:
             nombre_article += panier[obj]['qte']
             produit = Produit.objects.get(id=obj)
-            total   += produit.price * panier[obj]['qte']
+            total   = produit.price * panier[obj]['qte']
             commande['get_panier_article'] += panier[obj]['qte']
             commande['get_panier_total'] += total
 
@@ -158,7 +159,7 @@ def commande(request, *args, **kwargs):
         'commande':commande,
         'nombre_article': nombre_article
     }
-
+    
     return render(request, 'shop/commande.html', context)
 
 @login_required()
@@ -199,7 +200,7 @@ def traitement_commande(request,*args, **kwargs):
             commande.complete = True
         commande.save()
 
-        #Vérifier si la commande est physique
+        # Vérifier si la commande est physique
         if commande.produit_physique:
 
             AddressChipping.objects.create(

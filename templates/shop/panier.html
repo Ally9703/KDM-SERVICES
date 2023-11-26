@@ -36,11 +36,11 @@
         
             {% for article in articles %}
                 <div class="panier-row">
-                    <div style="flex:2"><img class="row-image" src="{{ article.produit.imageUrl }}" alt="image"></div>
-                    <div style="flex:2">{{ article.produit.name }} </div>
-                    <div style="flex:1">${{ article.produit.price }} </div>
+                    <div style="flex:2"><img class="row-image" src="{{article.produit.imageUrl}}" alt="image"></div>
+                    <div style="flex:2">{{article.produit.name}} </div>
+                    <div style="flex:1">${{article.produit.price}} </div>
                     <div style="flex:1">
-                        <p class="quantite">{{ article.quantite }} </p>
+                        <p class="quantite">{{article.quantite}} </p>
                         <div class="quantite">
                             <img class="chg-quantite update-panier update-panier" data-produit={{article.produit.pk}} 
                             data-action="add" src="{% static 'images/arrow-up.png' %}" alt="">
@@ -49,7 +49,7 @@
                             data-produit={{article.produit.pk}} data-action="remove" src="{%  static 'images/arrow-down.png' %}" alt="">
                         </div>
                     </div>
-                    <div style="flex:1">${{ article.get_total }} </div>
+                    <div style="flex:1">${{article.get_total}} </div>
                 </div>   
             {%endfor%}
 
