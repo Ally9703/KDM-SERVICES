@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import *
 from django.http import JsonResponse
 import json
-#from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 
