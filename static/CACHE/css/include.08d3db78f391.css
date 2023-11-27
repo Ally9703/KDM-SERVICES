@@ -1,0 +1,1390 @@
+/* L'importation de fichier scss (DESIGN) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@media (max-width: 1200px) {
+  /* line 2, static/main/_responsive.scss */
+  html {
+    font-size: 55%; }
+  /* line 5, static/main/_responsive.scss */
+  .header {
+    padding: 2rem; }
+  /* line 8, static/main/_responsive.scss */
+  #responsive {
+    display: block; }
+  /* line 12, static/main/_responsive.scss */
+  #large {
+    display: none; }
+  /* line 15, static/main/_responsive.scss */
+  #shop {
+    display: block; }
+  /* line 21, static/main/_responsive.scss */
+  section {
+    padding: 3rem 2rem; } }
+
+@media (max-width: 991px) {
+  /* line 28, static/main/_responsive.scss */
+  .quick-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    text-align: center; }
+  /* line 35, static/main/_responsive.scss */
+  .quick-links .links {
+    padding: 1rem 0; }
+  /* line 38, static/main/_responsive.scss */
+  .quick-links .links a {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem 0; }
+  /* line 43, static/main/_responsive.scss */
+  .quick-links .share a {
+    margin: 0 1rem; }
+  /* line 46, static/main/_responsive.scss */
+  .credit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    text-align: center; } }
+
+@media (max-width: 768px) {
+  /* line 56, static/main/_responsive.scss */
+  #search-btn {
+    display: inline-block; }
+  /* line 61, static/main/_responsive.scss */
+  .header .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    height: 6rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  /* line 74, static/main/_responsive.scss */
+  .header .search-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  /* line 78, static/main/_responsive.scss */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; }
+  /* line 82, static/main/_responsive.scss */
+  .home .slide {
+    text-align: center; }
+  /* line 85, static/main/_responsive.scss */
+  .newsletter {
+    text-align: center; }
+  /* line 88, static/main/_responsive.scss */
+  .newsletter .content h3 {
+    font-size: 4rem; }
+  /* line 91, static/main/_responsive.scss */
+  .newsletter .content p {
+    font-size: 1.5rem; } }
+
+@media (max-width: 450px) {
+  /* line 97, static/main/_responsive.scss */
+  html {
+    font-size: 50%; }
+  /* line 100, static/main/_responsive.scss */
+  .header {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between; }
+  /* line 107, static/main/_responsive.scss */
+  .header .logo {
+    display: block; }
+  /* line 110, static/main/_responsive.scss */
+  .header .icons a,
+  .header .icons div {
+    margin: 0 1rem; }
+  /* line 114, static/main/_responsive.scss */
+  .home .slide .image img {
+    height: auto;
+    width: 100%; }
+  /* line 118, static/main/_responsive.scss */
+  .arrivals .box-container .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    gap: 2rem;
+    text-align: center; }
+  /* line 126, static/main/_responsive.scss */
+  .contact form .inputBox input {
+    width: 100%; }
+  /* line 129, static/main/_responsive.scss */
+  .shopping-cart .cart-total {
+    text-align: center; }
+  /* line 132, static/main/_responsive.scss */
+  .shopping-cart .cart-total .btn {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
+/* line 2, static/main/_variables.scss */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  /* Definitions des couleurs  */
+  --couleur-primaire:#000033;
+  --couleur-secondaire: #eee;
+  --couleur-tairtier:#66ccff;
+  --couleur-quatre: #cc3300;
+  --couleur-blue: #0984e3;
+  --couleur-noir:#333;
+  --couleur-blanc:#fff; }
+
+/* line 1, static/main/_body.scss */
+html {
+  overflow-x: hidden;
+  font-size: 62.5%; }
+
+/* line 6, static/main/_body.scss */
+html::-webkit-scrollbar {
+  width: 1rem; }
+
+/* line 10, static/main/_body.scss */
+html::-webkit-scrollbar-track {
+  background: var(--couleur-secondaire); }
+
+/* line 15, static/main/_body.scss */
+html::-webkit-scrollbar-thumb {
+  background: var(--couleur-primaire);
+  border-radius: 5rem; }
+
+/* line 21, static/main/_body.scss */
+body {
+  background: var(--couleur-secondaire); }
+
+/* line 25, static/main/_body.scss */
+#responsive {
+  display: none; }
+
+/* line 29, static/main/_body.scss */
+#large {
+  display: block; }
+
+/* line 33, static/main/_body.scss */
+#shop {
+  display: none; }
+
+/* line 37, static/main/_body.scss */
+section {
+  padding: 3rem 9%; }
+
+/* line 41, static/main/_body.scss */
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  color: var(--couleur-noir); }
+
+/* line 48, static/main/_body.scss */
+.heading span {
+  color: var(--couleur-primaire); }
+
+/* line 52, static/main/_body.scss */
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: .5rem;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--couleur-blanc);
+  cursor: pointer;
+  background: var(--couleur-primaire);
+  border-radius: 5px solid; }
+
+/* line 64, static/main/_body.scss */
+.btn:hover {
+  background: var(--couleur-blue); }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0; } }
+
+/* line 1, static/main/_header.scss */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--couleur-primaire);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 9%; }
+
+/* line 21, static/main/_header.scss */
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder; }
+
+/* line 27, static/main/_header.scss */
+.header .logo i {
+  color: gold; }
+
+/* line 31, static/main/_header.scss */
+.header .search-form {
+  border-radius: 5rem;
+  height: 5rem;
+  width: 50rem;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--couleur-secondaire); }
+
+/* line 45, static/main/_header.scss */
+.header .search-form input {
+  width: 100%;
+  padding-right: 1rem;
+  font-size: 1.7rem;
+  text-transform: none;
+  color: #666; }
+
+/* line 53, static/main/_header.scss */
+.header .search-form label {
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer; }
+
+/* line 59, static/main/_header.scss */
+.header .search-form label:hover {
+  color: #0984e3; }
+
+/* line 63, static/main/_header.scss */
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none; }
+
+/* line 72, static/main/_header.scss */
+.header .icons a:hover,
+.header .icons div:hover {
+  color: gold; }
+
+/* line 1, static/main/_navbar.scss */
+#search-btn {
+  display: none; }
+
+/* line 5, static/main/_navbar.scss */
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  height: 100%;
+  width: 30rem;
+  background: var(--couleur-secondaire);
+  z-index: 10000; }
+
+/* line 15, static/main/_navbar.scss */
+.side-bar.active {
+  left: 0;
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7); }
+
+/* line 21, static/main/_navbar.scss */
+.side-bar #close-side-bar {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #666; }
+
+/* line 30, static/main/_navbar.scss */
+.side-bar #close-side-bar:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #333; }
+
+/* line 36, static/main/_navbar.scss */
+.side-bar .user {
+  padding: 2rem;
+  background: #eee;
+  text-align: center; }
+
+/* line 42, static/main/_navbar.scss */
+.side-bar .user img {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  border: 1rem solid #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin-bottom: .5rem; }
+
+/* line 52, static/main/_navbar.scss */
+.side-bar .user h3 {
+  padding: .5rem 0;
+  font-size: 1.7rem;
+  color: #666; }
+
+/* line 58, static/main/_navbar.scss */
+.side-bar .user a {
+  font-size: 1.5rem;
+  color: #0984e3;
+  text-decoration: none; }
+
+/* line 64, static/main/_navbar.scss */
+.side-bar .user a:hover {
+  color: #333; }
+
+/* line 68, static/main/_navbar.scss */
+.side-bar .navbar {
+  padding-top: 1rem; }
+
+/* line 72, static/main/_navbar.scss */
+.side-bar .navbar a {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  color: #666;
+  text-decoration: none; }
+
+/* line 80, static/main/_navbar.scss */
+.side-bar .navbar a:hover {
+  color: #0984e3; }
+
+/* line 84, static/main/_navbar.scss */
+.side-bar .navbar a:hover i {
+  padding-right: 2rem; }
+
+/* line 88, static/main/_navbar.scss */
+.side-bar .navbar a i {
+  padding-right: .5rem; }
+
+/* line 1, static/main/_home.scss */
+.home {
+  background: var(--couleur-blanc); }
+
+/* line 5, static/main/_home.scss */
+.home .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 40rem;
+  padding: 2rem 0; }
+
+/* line 19, static/main/_home.scss */
+.home .slide .image {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  text-align: center; }
+
+/* line 26, static/main/_home.scss */
+.home .slide .image img {
+  height: 30rem; }
+
+/* line 30, static/main/_home.scss */
+.home .slide .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem; }
+
+/* line 36, static/main/_home.scss */
+.home .slide .content span {
+  font-size: 2rem;
+  color: #0984e3; }
+
+/* line 41, static/main/_home.scss */
+.home .slide .content h3 {
+  padding-top: .5rem;
+  color: #333;
+  font-size: 3rem; }
+
+/* line 47, static/main/_home.scss */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: #333; }
+
+/* line 1, static/main/_bannier.scss */
+.banner .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(31rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem; }
+
+/* line 9, static/main/_bannier.scss */
+.banner span {
+  color: red; }
+
+/* line 13, static/main/_bannier.scss */
+.banner .box-container .box {
+  position: relative;
+  height: 35rem;
+  border: 0.2rem solid #333;
+  border-radius: .5rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(203, 65, 65, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/* .banner .box-container .box:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  } */
+/* line 28, static/main/_bannier.scss */
+.banner .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+/* line 35, static/main/_bannier.scss */
+.banner .box-container .box .content {
+  position: absolute;
+  top: 55%;
+  left: 1%;
+  /* -webkit-transform: translateY(-10%) rotate(10deg);
+            transform: translateY(-10%) rotate(10deg); */ }
+
+/* line 43, static/main/_bannier.scss */
+.banner .box-container .box .content h2 {
+  color: red;
+  font-size: 2rem; }
+
+/* line 48, static/main/_bannier.scss */
+.banner .box-container .box .content span {
+  font-size: 1.7rem;
+  color: #0984e3; }
+
+/* line 53, static/main/_bannier.scss */
+.banner .box-container .box .content h3 {
+  font-size: 2rem;
+  padding: .5rem 0;
+  color: #333; }
+
+/* line 1, static/main/_arrivage.scss */
+.arrivals h1 span {
+  color: red; }
+
+/* line 5, static/main/_arrivage.scss */
+.arrivals .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(33rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2rem; }
+
+/* line 13, static/main/_arrivage.scss */
+.arrivals .box-container .box {
+  border-radius: .5rem;
+  border: 0.2rem solid #333;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  background: #fff; }
+
+/* line 29, static/main/_arrivage.scss */
+.arrivals .box-container .box:hover .image .main-img {
+  display: none; }
+
+/* line 33, static/main/_arrivage.scss */
+.arrivals .box-container .box:hover .image .hover-img {
+  display: inline-block; }
+
+/* line 37, static/main/_arrivage.scss */
+.arrivals .box-container .box .image img {
+  height: 15rem;
+  -webkit-animation: fadeIn .2s linear;
+  animation: fadeIn .2s linear; }
+
+/* line 43, static/main/_arrivage.scss */
+.arrivals .box-container .box .image .hover-img {
+  display: none; }
+
+/* line 47, static/main/_arrivage.scss */
+.arrivals .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333; }
+
+/* line 52, static/main/_arrivage.scss */
+.arrivals .box-container .box .content .price {
+  padding-top: .5erm;
+  font-size: 2rem;
+  color: #0984e3;
+  padding-bottom: .7rem; }
+
+/* line 59, static/main/_arrivage.scss */
+.arrivals .box-container .box .content .price span {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: line-through; }
+
+/* line 65, static/main/_arrivage.scss */
+.arrivals .box-container .box .content .stars i {
+  font-size: 1.5rem;
+  color: gold; }
+
+/* line 1, static/main/_footer.scss */
+.quick-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  background: #333;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/* line 15, static/main/_footer.scss */
+.quick-links .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder; }
+
+/* line 21, static/main/_footer.scss */
+.quick-links .logo i {
+  color: gold; }
+
+/* line 25, static/main/_footer.scss */
+.quick-links .links a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-decoration: none; }
+
+/* line 32, static/main/_footer.scss */
+.quick-links .links a:hover {
+  color: gold; }
+
+/* line 36, static/main/_footer.scss */
+.quick-links .share a {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-left: 2rem;
+  text-decoration: none; }
+
+/* line 43, static/main/_footer.scss */
+.quick-links .share a:hover {
+  color: gold; }
+
+/* line 47, static/main/_footer.scss */
+.credit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/* line 63, static/main/_footer.scss */
+.credit p {
+  font-size: 2rem;
+  color: #666; }
+
+/* line 68, static/main/_footer.scss */
+.credit p span {
+  color: #0984e3; }
+
+/* line 72, static/main/_footer.scss */
+.credit img {
+  height: 4rem;
+  -webkit-filter: drop-shadow(0 0 0.1rem #333);
+  filter: drop-shadow(0 0 0.1rem #333); }
+
+/* line 2, static/main/_commande.scss */
+.info-container .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(31rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem; }
+
+/* line 10, static/main/_commande.scss */
+.info-container .box-container .box {
+  background: var(--couleur-secondaire);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 2rem;
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/* line 20, static/main/_commande.scss */
+.info-container .box-container .box i {
+  height: 7.5rem;
+  width: 7.5rem;
+  line-height: 7.5rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+  /* background: #0984e3; */
+  background: var(--couleur-primaire);
+  color: var(--couleur-primaire); }
+
+/* line 33, static/main/_commande.scss */
+.info-container .box-container .box h3 {
+  font-size: 2rem;
+  padding: .5rem 0;
+  color: #333; }
+
+/* line 39, static/main/_commande.scss */
+.info-container .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666; }
+
+/* line 44, static/main/_commande.scss */
+.info-container .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+  /* text-transform: none; */ }
+
+/* line 50, static/main/_commande.scss */
+.info-container .box-container .box p:nth-of-type(1) {
+  text-transform: none;
+  color: #666; }
+
+/* line 54, static/main/_commande.scss */
+.info-container .box-container .box p:nth-of-type(2) {
+  text-transform: none;
+  color: #666; }
+
+/* line 59, static/main/_commande.scss */
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem; }
+
+/* line 68, static/main/_commande.scss */
+.contact form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem; }
+
+/* line 74, static/main/_commande.scss */
+.contact form h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #333;
+  padding-bottom: 1rem; }
+
+/* line 81, static/main/_commande.scss */
+.contact form p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2; }
+
+/* line 88, static/main/_commande.scss */
+.contact form .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+/* line 99, static/main/_commande.scss */
+.contact form .inputBox input {
+  width: 49%; }
+
+/* line 103, static/main/_commande.scss */
+.contact form .inputBox input, .contact form textarea {
+  padding: 1.2rem 1.4rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border: 0.2rem solid #333;
+  background: #fff;
+  text-transform: none;
+  color: #666;
+  font-size: 1.5rem;
+  margin: .7rem 0; }
+
+/* line 116, static/main/_commande.scss */
+.contact form textarea {
+  height: 15rem;
+  resize: none;
+  width: 100%; }
+
+/* line 122, static/main/_commande.scss */
+.contact .map {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  width: 100%; }
+
+/* line 129, static/main/_commande.scss */
+.newsletter {
+  /* background: #0984e3; */
+  background-color: var(--couleur-primaire);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem; }
+
+/* line 143, static/main/_commande.scss */
+.newsletter .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem; }
+
+/* line 149, static/main/_commande.scss */
+.newsletter .content h3 {
+  font-size: 6rem;
+  color: #fff;
+  text-transform: uppercase; }
+
+/* line 155, static/main/_commande.scss */
+.newsletter .content p {
+  font-size: 2.2rem;
+  color: #fff; }
+
+/* line 160, static/main/_commande.scss */
+.newsletter form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  border-radius: .5rem; }
+
+/* line 172, static/main/_commande.scss */
+.newsletter form .email {
+  width: 100%;
+  padding: 0 1.4rem;
+  text-transform: none;
+  color: #666;
+  font-size: 1.6rem; }
+
+/* line 180, static/main/_commande.scss */
+.newsletter form .btn {
+  margin-top: 0; }
+
+/* line 2, static/main/_panier.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #4d4d4d; }
+
+/* line 7, static/main/_panier.scss */
+.box-element {
+  box-shadow: #cccccc 0 0 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px; }
+
+/* line 14, static/main/_panier.scss */
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  -webkit-box-shadow: -1px -3px 5px -2px #d6d6d6;
+  -moz-box-shadow: -1px -3px 5px -2px #d6d6d6;
+  box-shadow: -1px -3px 5px -2px #d6d6d6; }
+
+/* line 22, static/main/_panier.scss */
+.product {
+  border-radius: 0 0 4px 4px; }
+
+/* line 26, static/main/_panier.scss */
+#icon-panier {
+  width: 50px;
+  display: inline-block;
+  margin-left: 15px; }
+
+/* line 32, static/main/_panier.scss */
+#total-panier {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  width: 20px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 14px; }
+
+/* line 44, static/main/_panier.scss */
+.btn {
+  border-radius: 0; }
+
+/* line 49, static/main/_panier.scss */
+.panier-row {
+  display: flex;
+  align-items: flex-stretch;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ececec; }
+
+/* line 59, static/main/_panier.scss */
+.row-image {
+  width: 100px; }
+
+/* line 63, static/main/_panier.scss */
+.quantite {
+  display: inline-block;
+  font-weight: 700;
+  padding-right: 10px; }
+
+/* line 71, static/main/_panier.scss */
+.chg-quantite {
+  width: 12px;
+  cursor: pointer;
+  display: block;
+  margin-top: 5px;
+  transition: .1s; }
+
+/* line 79, static/main/_panier.scss */
+.chg-quantite:hover {
+  opacity: .6; }
+
+/* line 83, static/main/_panier.scss */
+.form-field {
+  width: 250px;
+  display: inline-block;
+  padding: 5px; }
+
+/* line 89, static/main/_panier.scss */
+.hidden {
+  display: none !important; }
+
+/* Faire la suite ici */
+/* line 3, static/main/_autres.scss */
+.faq .accordion-container {
+  max-width: 70rem;
+  margin: 0 auto; }
+
+/* line 8, static/main/_autres.scss */
+.faq .accordion-container .accordion {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/* line 15, static/main/_autres.scss */
+.faq .accordion-container .accordion:last-child {
+  margin-bottom: .5rem; }
+
+/* line 19, static/main/_autres.scss */
+.faq .accordion-container .accordion.active .accordion-heading {
+  background: #0984e3; }
+
+/* line 23, static/main/_autres.scss */
+.faq .accordion-container .accordion.active .accordion-heading i {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/* line 28, static/main/_autres.scss */
+.faq .accordion-container .accordion.active .accordioin-content {
+  display: block; }
+
+/* line 32, static/main/_autres.scss */
+.faq .accordion-container .accordion .accordion-heading {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #333;
+  cursor: pointer; }
+
+/* line 48, static/main/_autres.scss */
+.faq .accordion-container .accordion .accordion-heading h3 {
+  font-size: 2rem;
+  color: #fff; }
+
+/* line 53, static/main/_autres.scss */
+.faq .accordion-container .accordion .accordion-heading i {
+  font-size: 2rem;
+  color: #fff; }
+
+/* line 58, static/main/_autres.scss */
+.faq .accordion-container .accordioin-content {
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+  display: none;
+  -webkit-animation: fadeIn .2s linear;
+  animation: fadeIn .2s linear; }
+
+/* line 68, static/main/_autres.scss */
+.review .slide {
+  width: 35rem;
+  padding: 3rem;
+  text-align: center;
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  background: #fff; }
+
+/* line 79, static/main/_autres.scss */
+.review .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: .5rem; }
+
+/* line 86, static/main/_autres.scss */
+.review .slide h3 {
+  font-size: 2rem;
+  color: #333; }
+
+/* line 91, static/main/_autres.scss */
+.review .slide span {
+  color: #0984e3;
+  font-size: 1.7rem; }
+
+/* line 96, static/main/_autres.scss */
+.review .slide p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+  padding-top: 1rem; }
+
+/* line 103, static/main/_autres.scss */
+.category .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(15rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem; }
+
+/* line 111, static/main/_autres.scss */
+.category .box-container .box {
+  text-align: center;
+  border-radius: .5rem;
+  border: 0.2rem solid #333;
+  padding: 2rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+/* line 121, static/main/_autres.scss */
+.category .box-container .box:hover {
+  background: #333; }
+
+/* line 125, static/main/_autres.scss */
+.category .box-container .box:hover h3 {
+  color: #fff; }
+
+/* line 129, static/main/_autres.scss */
+.category .box-container .box img {
+  height: 8rem;
+  margin-bottom: .5rem; }
+
+/* line 134, static/main/_autres.scss */
+.category .box-container .box h3 {
+  font-size: 1.7rem;
+  color: #333; }
+
+/* line 139, static/main/_autres.scss */
+.products .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(31rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem; }
+
+/* line 147, static/main/_autres.scss */
+.products .box-container .box {
+  border: 0.2rem solid #333;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  overflow: hidden; }
+
+/* line 157, static/main/_autres.scss */
+.products .box-container .box:hover .image .hover-img {
+  display: inline-block; }
+
+/* line 161, static/main/_autres.scss */
+.products .box-container .box:hover .image .main-img {
+  display: none; }
+
+/* line 165, static/main/_autres.scss */
+.products .box-container .box:hover .image .icons {
+  left: 1rem; }
+
+/* line 169, static/main/_autres.scss */
+.products .box-container .box .image {
+  position: relative; }
+
+/* line 173, static/main/_autres.scss */
+.products .box-container .box .image img {
+  height: 30rem;
+  -webkit-animation: fadeIn .2s linear;
+  animation: fadeIn .2s linear; }
+
+/* line 179, static/main/_autres.scss */
+.products .box-container .box .image .hover-img {
+  display: none; }
+
+/* line 183, static/main/_autres.scss */
+.products .box-container .box .image .icons {
+  position: absolute;
+  top: 0;
+  left: -7rem; }
+
+/* line 189, static/main/_autres.scss */
+.products .box-container .box .image .icons a {
+  display: block;
+  margin-top: 1rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #333; }
+
+/* line 201, static/main/_autres.scss */
+.products .box-container .box .image .icons a:hover {
+  background: #0984e3; }
+
+/* line 205, static/main/_autres.scss */
+.products .box-container .box .content {
+  padding: 2rem; }
+
+/* line 209, static/main/_autres.scss */
+.products .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333; }
+
+/* line 214, static/main/_autres.scss */
+.products .box-container .box .content .price {
+  font-size: 2.2rem;
+  color: #0984e3;
+  padding-bottom: .7rem;
+  padding-top: .5rem; }
+
+/* line 221, static/main/_autres.scss */
+.products .box-container .box .content .price span {
+  color: #666;
+  font-size: 1.5rem;
+  text-decoration: line-through; }
+
+/* line 227, static/main/_autres.scss */
+.products .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: gold; }
+
+/* line 232, static/main/_autres.scss */
+.product-banner .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem; }
+
+/* line 241, static/main/_autres.scss */
+.product-banner .box-container .box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  position: relative;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  border: 0.2rem solid #333;
+  overflow: hidden;
+  height: 30rem; }
+
+/* line 254, static/main/_autres.scss */
+.product-banner .box-container .box:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/* line 259, static/main/_autres.scss */
+.product-banner .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+/* line 266, static/main/_autres.scss */
+.product-banner .box-container .box .content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* line 274, static/main/_autres.scss */
+.product-banner .box-container .box .content span {
+  font-size: 1.7rem;
+  color: #0984e3; }
+
+/* line 279, static/main/_autres.scss */
+.product-banner .box-container .box .content h3 {
+  padding-top: .5rem;
+  font-size: 2rem;
+  color: #333; }
+
+/* line 286, static/main/_autres.scss */
+.register form,
+.login form {
+  max-width: 40rem;
+  border-radius: .5rem;
+  padding: 2rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border: 0.2rem solid #333;
+  margin: 1rem auto; }
+
+/* line 298, static/main/_autres.scss */
+.register form h3,
+.login form h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #333;
+  text-transform: uppercase; }
+
+/* line 306, static/main/_autres.scss */
+.register form .box,
+.login form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: .5rem;
+  border: 0.2rem solid #333;
+  font-size: 1.6rem;
+  color: #666;
+  text-transform: none;
+  margin: .7rem 0; }
+
+/* line 318, static/main/_autres.scss */
+.register form .remember,
+.login form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: .5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem; }
+
+/* line 331, static/main/_autres.scss */
+.register form .remember label,
+.login form .remember label {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer; }
+
+/* line 338, static/main/_autres.scss */
+.register form .btn,
+.login form .btn {
+  width: 100%;
+  text-align: center; }
+
+/* line 344, static/main/_autres.scss */
+.register form .btn.link,
+.login form .btn.link {
+  background: #333; }
+
+/* line 349, static/main/_autres.scss */
+.register form .btn.link:hover,
+.login form .btn.link:hover {
+  background: #0984e3; }
+
+/* line 354, static/main/_autres.scss */
+.register form p,
+.login form p {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  padding-bottom: 1rem; }
+
+/* line 363, static/main/_autres.scss */
+.shopping-cart .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(31rem, 1fr) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem; }
+
+/* line 371, static/main/_autres.scss */
+.shopping-cart .box-container .box {
+  padding: 2rem;
+  border: 0.2rem solid #333;
+  background: #fff;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: .5rem;
+  position: relative; }
+
+/* line 388, static/main/_autres.scss */
+.shopping-cart .box-container .box .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  color: #666;
+  cursor: pointer; }
+
+/* line 397, static/main/_autres.scss */
+.shopping-cart .box-container .box .fa-times:hover {
+  color: #333; }
+
+/* line 401, static/main/_autres.scss */
+.shopping-cart .box-container .box img {
+  height: 12rem; }
+
+/* line 405, static/main/_autres.scss */
+.shopping-cart .box-container .box .content h3 {
+  font-size: 1.7rem;
+  color: #333; }
+
+/* line 410, static/main/_autres.scss */
+.shopping-cart .box-container .box .content form {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* line 421, static/main/_autres.scss */
+.shopping-cart .box-container .box .content form span {
+  font-size: 1.5rem;
+  color: #666; }
+
+/* line 426, static/main/_autres.scss */
+.shopping-cart .box-container .box .content form input {
+  width: 7rem;
+  padding: .5rem 1rem;
+  color: #666;
+  border-radius: .5rem;
+  background: #eee;
+  font-size: 1.5rem; }
+
+/* line 435, static/main/_autres.scss */
+.shopping-cart .box-container .box .content .price {
+  font-size: 2rem;
+  color: #0984e3; }
+
+/* line 440, static/main/_autres.scss */
+.shopping-cart .box-container .box .content .price span {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: line-through; }
+
+/* line 446, static/main/_autres.scss */
+.shopping-cart .cart-total {
+  margin-top: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border: 0.2rem solid #333;
+  border-radius: .5rem;
+  background: #fff;
+  padding: 2rem;
+  padding-top: 1rem; }
+
+/* line 457, static/main/_autres.scss */
+.shopping-cart .cart-total h3 {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: #333; }
+
+/* line 463, static/main/_autres.scss */
+.shopping-cart .cart-total h3 span {
+  color: #0984e3; }
+
+/* line 467, static/main/_autres.scss */
+.quick-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  background: #333;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
