@@ -13,3 +13,6 @@ def panier(request):
 
 def commande(request):
     return render(request, 'shop/testCommande.html')
+
+def about(request):
+    return render(request, 'shop/about.html')
