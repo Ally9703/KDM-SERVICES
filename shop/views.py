@@ -16,3 +16,6 @@ def commande(request):
 
 def about(request):
     return render(request, 'shop/about.html')
+
+def question(request):
+    return render(request, 'shop/questions.html')
