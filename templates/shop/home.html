@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static%}
+{%block titre%}home page{%endblock%}
+
+{%block content%}
+<!-- home section starts  -->
+
+<section class="home">
+
+    <div class="swiper home-slider">
+
+        <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+            <div class="image">
+                <img src="{% static 'imagesTest/test4.jpeg' %}" alt="">
+            </div>
+            <div class="content">
+                <span>promotion 50% de</span>
+                <h3>Robe</h3>
+                <a href="{% url 'shop:panier'%}" class="btn">ajouter au panier</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide slide">
+            <div class="image">
+                <img src="{% static 'imagesTest/test3.jpeg' %}" alt="">
+            </div>
+            <div class="content">
+                <span>promotion 50% de</span>
+                <h3>veste</h3>
+                <a href="#" class="btn">payer maintenant</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide slide">
+            <div class="image">
+                <img src="{%static 'imagesTest/test5.jpeg'%}" alt="">
+            </div>
+            <div class="content">
+                <span>promotion 50% de</span>
+                <h3>chémise</h3>
+                <a href="#" class="btn">payer maintenant</a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- SECTION DE VENTE  -->
+
+<section class="banner">
+
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'imagesTest/banner-1.jpg'%}" alt="">
+            <div class="content">
+                <span>l'écouteur</span>
+                <h3>un meilleur prix</h3>
+                <hr>
+                <div>
+                    <a href="" class="btn">Ajouter au panier</a>
+                    <a href="" class="btn">voir </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'imagesTest/banner-2.jpg' %}" alt="">
+            <div class="content">
+                <span>special promotion</span>
+                <h3>à 50% offerte</h3>
+                <div>
+                    <a href="" class="btn">Ajouter au panier</a>
+                    <a href="" class="btn">voir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'imagesTest/banner-3.jpg' %}" alt="">
+            <div class="content">
+                <span>special promotion</span>
+                <h3>à 50% offerte</h3>
+                <div>
+                    <a href="" class="btn">Ajouter au panier</a>
+                    <a href="" class="btn">voir</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+
+<!-- banner section ends -->
+
+{%endblock%}
