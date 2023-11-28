@@ -1,76 +1,33 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% load static %}
-{% block titre%}Page de commande{%endblock%}
+{% block titre%}Page de commande {%endblock%}
 
-{% block content %}
-<br>
-<div class="row">
-    <div class="col-lg-5">
-        <div class="box-element" id='form-wrapper'>
-            <form action="" id="form">
-                {% csrf_token %}
+{% block content%}
 
-                <div id="user-info">
-                    <p>Informations Personnelles:</p>
+<!-- contact section starts  -->
 
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="name" placeholder="Nom..." required>
-                    </div>
+<section class="contact">
 
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="username" placeholder="Prénom..." required>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="number" class="form-control" name="phone" placeholder="Tel..." required>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="email" class="form-control" name="email" placeholder="Email..." required>
-                    </div>
-
-                </div>
-
-                <div id="shipping-info">
-                    <hr>
-                    <p>Informations d'Expédition:</p>
-
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="address" placeholder="address..." required>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="city" placeholder="Ville..." required>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="state" placeholder="Pays..." required>
-                    </div>
-
-                    <div class="form-field">
-                        <input type="text" class="form-control" name="zipcode" placeholder="Zip code..." required>
-                    </div>
-
-                </div>
-
-                <hr>
-                <input id="form-button" class="btn w-100 btn-success btn-block" type="submit" value="Continuer">
-            </form>
-
+    <form action="">
+       
+        <div class="inputBox">
+            <input type="text" placeholder="Nom">
+            <input type="text" placeholder="Prenom">
+            <input type="email" placeholder="vote mail">
+            <input type="number" placeholder="Téléphone">
         </div>
-
-        <br>
-
-        <div class="box-element hidden" id="payment-info">
-            <small>Veillez choissir le Mode de paiement</small>
-            <button class="btn w-100 btn-success btn-block" id="make-payment">Effectuer lee paiement</button>
-
+        <p><span>Informations D'expedition</span></p>
+        <div class="inputBox">
+            <input type="text" placeholder="sujet">
+            <input type="text" placeholder="sujet">
+            <input type="text" placeholder="sujet">
+            <input type="text" placeholder="sujet">
         </div>
+        <!-- <textarea name="" placeholder="votre message" id="" cols="30" rows="10"></textarea> -->
+        <input type="submit" value="voyez le message" class="btn">
+    </form>
 
-    </div>
-
-
-
+    <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.89592087332!2d72.8319697277345!3d19.14167056419224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1638365961619!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe> -->
     <div class="col-lg-7">
         <div class="box-element">
 
@@ -95,7 +52,10 @@
 
         </div>
     </div>
-</div>
+
+</section>
+
+<!-- contact section ends -->
 
 
-{% endblock content %}
+{% endblock%}

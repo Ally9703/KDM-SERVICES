@@ -12,7 +12,7 @@ def panier(request):
     return render(request, 'shop/panier.html')
 
 def commande(request):
-    return render(request, 'shop/testCommande.html')
+    return render(request, 'shop/commande.html')
 
 def about(request):
     return render(request, 'shop/about.html')
