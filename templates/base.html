@@ -27,6 +27,55 @@
     rel="stylesheet" media="screen">
     {% endcompress %}
 
+    <script defer type="text/javascript">
+        var user = "{{request.user}}"
+        function getToken(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken');
+
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            // Loop through the array elements
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+
+                /* Removing whitespace at the beginning of the cookie name
+                and compare i with the given string */
+                if (name == cookiePair[0].trim()) {
+                    // Decode the cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            // Return null if not found
+            return null;
+        }
+
+        var panier = JSON.parse(getCookie('panier'));
+        
+        if(panier == undefined){
+            panier = {};
+            console.log('cookie créer');
+            document.cookie = "panier" + JSON.stringify(panier) + ";domain=;path/";
+        }
+        console.log('panier', panier);
+    </script>
+
+
 </head>
 <body>
     
@@ -42,7 +91,7 @@
     </form>
 
     <div class="icons" id="large">
-        <a href="{% url 'shop:panier' %}" class="fas fa-shopping-cart"><span style="color:red">10</span></a>
+        <a href="{% url 'shop:panier' %}" class="fas fa-shopping-cart" id="total-panier"><span style="color:red">{{ nombre_article }}</span></a>
         <div id="menu-btn" class="fas fa-bars"></div>
         
         <div id="search-btn" class="fas fa-search"></div>
@@ -70,7 +119,7 @@
 
     <div class="user">
         <img src="{%static 'imagesTest/1.jpg' %}" alt="">
-        <h3>Alliance Tshindayi</h3>
+        <h3>{{request.user}}</h3>
         <a href="#">déconexion</a>
     </div>
 
@@ -144,6 +193,7 @@
 
 <!-- custom js file link  -->
 <script src="{% static 'js/scipt.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/panier.js' %}"></script>
 
 </body>
 </html>

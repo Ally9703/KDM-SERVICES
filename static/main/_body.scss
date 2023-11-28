@@ -60,6 +60,19 @@ html {
     background: var(--couleur-primaire);
 
   }
+
+  .btn-success{
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color:var(--couleur-blanc);
+    cursor: pointer;
+    background: green;
+    text-decoration: none;
+    text-align: center;
+  }
   
   .btn:hover {
     background:var(--couleur-blue);

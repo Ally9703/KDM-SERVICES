@@ -10,42 +10,21 @@
     <div class="swiper home-slider">
 
         <div class="swiper-wrapper">
-
+    
         <div class="swiper-slide slide">
             <div class="image">
-                <img src="{% static 'imagesTest/test4.jpeg' %}" alt="">
+                <img src="{{ produit.imageUrl }}" alt="">
             </div>
             <div class="content">
-                <span>promotion 50% de</span>
-                <h3>Robe</h3>
-                <a href="{% url 'shop:panier'%}" class="btn">ajouter au panier</a>
+                <h3>{{produit.name}} Robe <span style="color: red; font-weight: bold;">${{produit.price}} 100</span></h3>
+                <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
+                data-action="add">ajouter au panier</a>
+                
             </div>
         </div>
+    
 
-        <div class="swiper-slide slide">
-            <div class="image">
-                <img src="{% static 'imagesTest/test3.jpeg' %}" alt="">
-            </div>
-            <div class="content">
-                <span>promotion 50% de</span>
-                <h3>veste</h3>
-                <a href="#" class="btn">payer maintenant</a>
-            </div>
-        </div>
-
-        <div class="swiper-slide slide">
-            <div class="image">
-                <img src="{%static 'imagesTest/test5.jpeg'%}" alt="">
-            </div>
-            <div class="content">
-                <span>promotion 50% de</span>
-                <h3>chémise</h3>
-                <a href="#" class="btn">payer maintenant</a>
-            </div>
-        </div>
-
-        </div>
-
+        
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
