@@ -5,6 +5,7 @@ import json
 #from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
+from .utile import *
 
 
 # Page de Shop (Page d'accueil)

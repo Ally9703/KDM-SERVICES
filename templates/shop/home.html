@@ -16,15 +16,13 @@
                 <img src="{{ produit.imageUrl }}" alt="">
             </div>
             <div class="content">
-                <h3>{{produit.name}} Robe <span style="color: red; font-weight: bold;">${{produit.price}} 100</span></h3>
+                <h3>{{produit.name}}<span style="color: red; font-weight: bold;">${{produit.price}}</span></h3>
                 <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
                 data-action="add">ajouter au panier</a>
                 
             </div>
         </div>
     
-
-        
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
 
