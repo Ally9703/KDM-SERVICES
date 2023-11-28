@@ -8,9 +8,9 @@
 <section class="home">
 
     <div class="swiper home-slider">
-
-        <div class="swiper-wrapper">
     
+        <div class="swiper-wrapper">
+    {% for produit in produits %}
         <div class="swiper-slide slide">
             <div class="image">
                 <img src="{{ produit.imageUrl }}" alt="">
@@ -22,10 +22,11 @@
                 
             </div>
         </div>
-    
+    {%endfor%}
+
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
+    
     </div>
 
 </section>

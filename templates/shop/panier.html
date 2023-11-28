@@ -44,7 +44,7 @@
             {% for article in articles %}
                 <div class="panier-row">
                     <!-- <div style="flex:2"><img class="row-image" src="{{article.produit.imageUrl}}" alt="image"></div> -->
-                    <div style="flex:2"><img class="row-image" src="{% static 'imagesTest/test4.jpeg' %}" alt="image">
+                    <div style="flex:2"><img class="row-image" src="{{article.produit.imageUrl}}" alt="image">
                     </div>
                     <div style="flex:2">{{article.produit.name}}</div>
                     <div style="flex:1">${{article.produit.price}}</div>
