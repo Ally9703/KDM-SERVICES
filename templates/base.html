@@ -108,8 +108,8 @@
     <a href="{% url 'shop:shop' %}" class="logo"><img src="{% static 'images/Logo_kdmbusiness_white.png' %}" alt="" style="width:180px; border-radius:10px ;"></a>
 
     <div class="links">
-        <a href="home.html"> accueil </a>
-        <a href="autres-pages/apropos.html"> à propos </a>
+        <a href="{% url 'shop:shop' %}"> accueil </a>
+        <a href="{% url 'shop:about' %}"> à propos </a>
         <a href="{% url 'shop:produit' %}"> produits </a>
         <a href="autres-pages/contact.html"> contact </a>
         <a href="login.html"> connexion </a>
