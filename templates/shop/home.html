@@ -6,7 +6,7 @@
 <!-- home section starts  -->
 
 <section class="home">
-
+    
     <div class="swiper home-slider">
     
         <div class="swiper-wrapper">
@@ -16,18 +16,20 @@
                 <img src="{{ produit.imageUrl }}" alt="">
             </div>
             <div class="content">
-                <h3>{{produit.name}}<span style="color: red; font-weight: bold;">${{produit.price}}</span></h3>
+                <h3>{{produit.name}} <span style="color: red; font-weight: bold;">${{produit.price}}</span></h3>
                 <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
                 data-action="add">ajouter au panier</a>
                 
             </div>
         </div>
-    {%endfor%}
-
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+    {%endfor%}
+
+        
     
     </div>
+   
 
 </section>
 
@@ -38,45 +40,23 @@
 <section class="banner">
 
     <div class="box-container">
+        {% for produit in produits %}
         <div class="box">
-            <img src="{% static 'imagesTest/banner-1.jpg'%}" alt="">
+            <img src="{{ produit.imageUrl }}" alt="">
             <div class="content">
-                <span>l'écouteur</span>
-                <h3>un meilleur prix</h3>
-                <span style="color: red; font-size: 2rem; font-weight: bold;">$10</span>
+                <br><br>
+                <h3>{{produit.name}}</h3>
+                <span style="color:var(--couleur-primaire); font-size: 2rem; font-weight: bold;">${{produit.price}}</span>
                 
                 <div>
-                    <a href="" class="btn">Ajouter au panier</a>
+                    <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
+                        data-action="add">ajouter au panier</a>
                     <a href="" class="btn">voir </a>
                 </div>
             </div>
         </div>
+        {%endfor%}
 
-        <div class="box">
-            <img src="{% static 'imagesTest/banner-2.jpg' %}" alt="">
-            <div class="content">
-                <span>special promotion</span>
-                <h3>à 50% offerte</h3>
-                <span style="color: red; font-size: 2rem; font-weight: bold;">$10</span>
-                <div>
-                    <a href="" class="btn">Ajouter au panier</a>
-                    <a href="" class="btn">voir</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="{% static 'imagesTest/banner-3.jpg' %}" alt="">
-            <div class="content">
-                <span>special promotion</span>
-                <h3>à 50% offerte</h3>
-                <span style="color: red; font-size: 2rem; font-weight: bold;">$10</span>
-                <div>
-                    <a href="" class="btn">Ajouter au panier</a>
-                    <a href="" class="btn">voir</a>
-                </div>
-            </div>
-        </div>
         
     </div>
 
