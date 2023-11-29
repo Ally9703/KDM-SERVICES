@@ -44,13 +44,13 @@ var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     breakpoints: {
         450: {
-          slidesPerView: 1,
+          slidesPerView: 3,
         },
         768: {
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 1,
         },
     },
 });

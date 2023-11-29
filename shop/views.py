@@ -16,7 +16,6 @@ def shop(request, *args, **kwargs):
     if request.user.is_authenticated:
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
-        #articles = commande.commandearticle_set.all()
         nombre_article = commande.get_panier_article
             
     else:
@@ -51,8 +50,8 @@ def shop(request, *args, **kwargs):
 
 # Page  de panier 
 def panier(request, *args, **kwargs):
-    if request.user.is_authenticated:
 
+    if request.user.is_authenticated:
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
         articles = commande.commandearticle_set.all()

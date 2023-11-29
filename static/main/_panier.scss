@@ -9,7 +9,13 @@ h1,h2,h3,h4,h5,h6{
 	background-color: #fff;
 	border-radius: 4px;
 	padding: 10px;
+
+	.table h5{
+		font-size: 2rem;
+	}
 }
+
+
 
 .thumbnail{
 	width: 100%;
@@ -29,8 +35,6 @@ h1,h2,h3,h4,h5,h6{
     margin-left: 15px;
 }
 
-
-
 .panier-row{
 	display: flex;
     align-items: flex-stretch;
@@ -38,6 +42,12 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 10px;
     border-bottom: 1px solid #ececec;
 
+	strong{
+		font-size: 2rem;
+	}
+	.name{
+		font-size: 1.4rem;
+	}
 }
 
 .row-image{
@@ -48,9 +58,8 @@ h1,h2,h3,h4,h5,h6{
 	display: inline-block;
 	font-weight: 700;
 	padding-right:10px;
-	
-
 }
+
 
 .chg-quantite{
 	width: 12px;

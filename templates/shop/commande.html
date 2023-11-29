@@ -8,7 +8,7 @@
 
 <section class="contact" id='form-wrapper'>
     
-        <form action="">
+        <form action="" id="form">
             {% csrf_token %}
 
             <p><span>Informations personnelle</span></p>
@@ -46,20 +46,20 @@
             <a class="btn-success btn-outline-dark" href="{% url 'shop:panier' %}">&#x2190; Retour au panier </a>
 
             <hr>
-            <h3>Recapitulatif de la commande</h3>
+            <h3 class="name">Recapitulatif de la commande</h3>
             <hr>
 
             {% for article in articles %}
             <div class="panier-row">
                 <div style="flex:2"><img class="row-image" src="{{article.produit.imageUrl}}" alt=""></div>
-                <div style="flex:2">{{article.produit.name}}</div>
-                <div style="flex:1">${{article.produit.price}}</div>
-                <div style="flex:1">{{article.quantite}}</div>
+                <div style="flex:2" class="name">{{article.produit.name}}</div>
+                <div style="flex:1" class="name">${{article.produit.price}}</div>
+                <div style="flex:1" class="name">{{article.quantite}}</div>
             </div>
             {% endfor%}
 
-            <h5>Articles :{{commande.get_panier_article}} </h5>
-            <h5>Total: ${{commande.get_panier_total}} </h5>
+            <h5 style="font-size: 1.8rem;">Articles : <span style="color: red; font-weight: bold;">{{commande.get_panier_article}}</span></h5>
+            <h5 style="font-size: 1.8rem;">Total: <span style="color: red; font-weight: bold;">${{commande.get_panier_total}}</span></h5>
 
         </div>
     </div>
