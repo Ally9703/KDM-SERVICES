@@ -217,11 +217,14 @@ def traitement_commande(request,*args, **kwargs):
     return JsonResponse('Traitement complete', safe=False)
 
 
-def produit(request):
-    return render(request, 'shop/main.html')
+def produit(request, *args, **kwargs):
+    context={}
+    return render(request, 'shop/produit.html', context)
 
-def about(request):
-    return render(request, 'shop/about.html')
+def about(request, *args, **kwargs):
+    context={}
+    return render(request, 'shop/about.html', context)
 
-def question(request):
-    return render(request, 'shop/questions.html')
+def question(request, *args, **kwargs):
+    context={}
+    return render(request, 'shop/questions.html', context)
