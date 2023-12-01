@@ -16,6 +16,7 @@
                 <img src="{{ produit.imageUrl }}" alt="">
             </div>
             <div class="content">
+                <h3 style="color:rgb(67, 67, 164);">Nos meilleurs produit</h3>
                 <h3>{{produit.name}} <span style="color: red; font-weight: bold;">${{produit.price}}</span></h3>
                 <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
                 data-action="add">ajouter au panier</a>
@@ -42,6 +43,7 @@
 
     <div class="box-container">
         {% for produit in produits %}
+        {% if forloop.counter <= 6 %}
         <div class="box">
             <img src="{{ produit.imageUrl }}" alt="">
             <div class="content">
@@ -51,11 +53,13 @@
                 
                 <div>
                     <a href="{% url 'shop:panier'%}" class="btn add-btn update-panier" data-produit={{produit.id}}
-                        data-action="add">ajouter au panier</a>
-                    <a href="" class="btn">voir </a>
+                        data-action="add">ajouter</a>
+                    <a href="" class="btn">voir</a>
+                    <a href="{% url 'shop:produit'%}" class="btn">voir plus</a>
                 </div>
             </div>
         </div>
+        {%endif%}
         {%endfor%}
 
         
