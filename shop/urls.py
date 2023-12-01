@@ -13,5 +13,6 @@ urlpatterns = [
     path('question/', views.question, name="question"),
     path('update_article/', views.update_article, name='update_article'),
     path('traitement_commande/', views.traitement_commande, name="traitement_commande"),
+    path('carousel/', views.carousel, name="carousel"),
    
 ]

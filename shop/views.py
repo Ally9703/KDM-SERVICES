@@ -228,3 +228,7 @@ def about(request, *args, **kwargs):
 def question(request, *args, **kwargs):
     context={}
     return render(request, 'shop/questions.html', context)
+
+def carousel(request, *args, **kwargs):
+    context={}
+    return render(request, 'shop/carousel.html', context)
