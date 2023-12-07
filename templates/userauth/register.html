@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block titre %} Page d'inscription{%endblock%}
+
+{% block content%}
+<section class="contact" id='form-wrapper'>
+    <h1>Page d'inscription</h1>
+    <form action="{% url 'auth:register' %}" method="POST" id="form">
+    {% csrf_token %}
+        <div class="inputBox" id="user-info">
+            <label for="">Username</label>
+            <input type="text" name="username" id="username" placeholder="Create a username">
+            <br>
+            <label for="">First Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Create a Fist Name">
+            <br>
+            <label for="">Last Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Create a Last Name">
+            <br>
+            <label for="">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Create a E-mail">
+            <br>
+            <label for="">Password</label>
+            <input type="password" name="pass1" id="pass1" placeholder="Create a Password">
+            <br>
+            <label for="">Confirm Password</label>
+            <input type="password" name="pass2" id="pass2" placeholder="Confirm Password">
+        </div>
+        <input id="" class="btn w-100 btn-success btn-block" type="submit" value="Create compte">
+    </form>
+</section>
+{%endblock%}

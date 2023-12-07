@@ -78,6 +78,7 @@ def panier(request, *args, **kwargs):
             commande['get_panier_total'] += total
 
             article = {
+
                 'produit':{
                     'pk':produit.id,
                     'name':produit.name,
@@ -87,6 +88,7 @@ def panier(request, *args, **kwargs):
                 
                 'quantite': panier[obj]['qte'],
                 'get_total': total
+
             }
 
             articles.append(article)
@@ -183,6 +185,7 @@ def update_article(request,*args, **kwargs ):
     if commande_article.quantite <= 0:
         commande_article.delete()
     return JsonResponse("panier modifier", safe=False)
+
 
 # Page de traitement des articles 
 def traitement_commande(request,*args, **kwargs):

@@ -120,17 +120,19 @@
     <div class="user">
         <img src="{%static 'imagesTest/1.jpg' %}" alt="">
         <h3>{{request.user}}</h3>
-        <a href="#">déconexion</a>
+        <a href="{% url 'auth:logout' %}">déconexion</a>
     </div>
 
     <nav class="navbar">
+
         <a href="{% url 'shop:shop' %}"> <i class="fas fa-angle-right"></i> accueil </a>
         <a href="{% url 'shop:about' %}"> <i class="fas fa-angle-right"></i> à propos </a>
         <a href="{% url 'shop:produit' %}"> <i class="fas fa-angle-right"></i> produits </a>
         <a href="#"> <i class="fas fa-angle-right"></i> contact </a>
-        <a href="#"> <i class="fas fa-angle-right"></i> connexion </a>
-        <a href="#"> <i class="fas fa-angle-right"></i> inscription </a>
+        <a href="{% url 'auth:connexion' %}"> <i class="fas fa-angle-right"></i> connexion </a>
         <a href="{% url 'shop:panier' %}"> <i class="fas fa-angle-right"></i> pagner </a>
+        <a href="{% url 'auth:register' %}"> <i class="fas fa-angle-right"></i> inscription </a>
+
     </nav>
 
 </div>
