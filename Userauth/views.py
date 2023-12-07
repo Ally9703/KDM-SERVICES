@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from shop.models import Client
+from shop import *
 
 
 # Create your views here.
@@ -20,7 +20,7 @@ def register(request):
 
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name  = fname
-        myuser.last_name = lname
+        myuser.last_name   = lname
         
        
 
@@ -37,13 +37,13 @@ def connexion(request):
     if request.method == "POST":
         username = request.POST['username']
         pass1    = request.POST['pass1']
-
-        user = authenticate(username=username, password=pass1)
+        user = authenticate(request, username=username, password=pass1)
         
         if user is not None:
             login(request, user)
-            fname = user.first_name
-            return render(request, "userauth/test.html")    
+            messages.success(request,('Vous êtes connecté'))
+            return redirect('shop:shop')
+            #return render(request, "userauth/test.html")    
             
         
         else:
@@ -59,5 +59,3 @@ def deconnexion(request):
     return redirect('auth:connexion')
 
 
-def test(request):
-    return render(request, 'test.html')
