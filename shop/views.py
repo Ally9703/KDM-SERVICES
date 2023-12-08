@@ -219,18 +219,21 @@ def traitement_commande(request,*args, **kwargs):
         
     return JsonResponse('Traitement complete', safe=False)
 
-
+# Page produit
 def produit(request, *args, **kwargs):
     context={}
     return render(request, 'shop/produit.html', context)
 
+# Page Appros
 def about(request, *args, **kwargs):
     context={}
     return render(request, 'shop/about.html', context)
 
+# Page des question
 def question(request, *args, **kwargs):
     context={}
     return render(request, 'shop/questions.html', context)
+
 
 def carousel(request, *args, **kwargs):
     context={}
