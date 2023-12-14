@@ -8,8 +8,8 @@
     <form action="{% url 'auth:connexion' %}" method="POST" id="form">
     {% csrf_token %}
         <div class="inputBox" id="user-info">
-            <label for="">Username</label>
-            <input type="text" name="username" id="username" placeholder="Create a username">
+            <label for="">Nom d'utilisateur</label>
+            <input type="text" name="nom_utilisateur" id="nom_utilisateur" placeholder="Create a username">
             <br>
             <label for="">Password</label>
             <input type="password" name="pass1" id="pass1" placeholder="Create a Password">

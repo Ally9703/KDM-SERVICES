@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import redirect
+
 from .models import *
 from django.http import JsonResponse
 import json
@@ -9,7 +14,6 @@ from .utile import *
 
 
 # Page de Shop (Page d'accueil)
-
 def shop(request, *args, **kwargs):
     produits = Produit.objects.all()
 

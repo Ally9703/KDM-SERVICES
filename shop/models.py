@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User 
 #from django.utils import timezone
 
+
+
 # Classe Client
 class Client(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.SET_NULL, related_name='client')
@@ -81,8 +83,6 @@ class Commande(models.Model):
         articles = self.commandearticle_set.all()
         total = sum(article.quantite for article in articles)
         return total
-
-
 
 class CommandeArticle(models.Model):
     produit = models.ForeignKey(Produit, on_delete=models.SET_NULL, blank=True, null=True)

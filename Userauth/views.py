@@ -11,20 +11,20 @@ def register(request):
 
     if request.method == "POST":
 
-        username  =  request.POST['username']
-        fname     =  request.POST['fname']
-        lname     =  request.POST['lname']
+        nom_utilisateur  =  request.POST['nom_utilisateur']
+        prenom     =  request.POST['prenom']
+        nom     =  request.POST['nom']
         email     =  request.POST['email']
         pass1     =  request.POST['pass1']
         pass2     =  request.POST['pass2']
 
-        myuser = User.objects.create_user(username, email, pass1)
-        myuser.first_name  = fname
-        myuser.last_name   = lname
+        utilisateur = User.objects.create_user(nom_utilisateur, email, pass1)
+        utilisateur.first_name  = prenom
+        utilisateur.last_name   = nom
         
        
 
-        myuser.save()
+        utilisateur.save()
 
         messages.success(request, "Ton compte est bien créer !")
         return redirect('auth:connexion')
@@ -35,9 +35,9 @@ def register(request):
 
 def connexion(request):
     if request.method == "POST":
-        username = request.POST['username']
+        nom_utilisateur = request.POST['nom_utilisateur']
         pass1    = request.POST['pass1']
-        user = authenticate(request, username=username, password=pass1)
+        user = authenticate(request, nom_utilisateur=nom_utilisateur, password=pass1)
         
         if user is not None:
             login(request, user)
