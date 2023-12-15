@@ -1,23 +1,32 @@
 {% extends 'base.html' %}
-{% block titre %} Page de connexion{%endblock%}
+{% load static %}
+{% block title %}Connexion{% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row my-3">
+     <div class="col-sm-6 offset-sm-3">
+      <h3>Connexion</h3>
+      <hr>
+      <form action="" method="post" novalidate class="shadow p-5">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small> <br>     
+        {% endfor %}
 
-{% block content%}
-<br><br><br><br><br><br><br>
-<section class="contact" id='form-wrapper'>
-    <h1>Page d'inscription</h1>
-    <form action="{% url 'auth:connexion' %}" method="POST" id="form">
-    {% csrf_token %}
-        <div class="inputBox" id="user-info">
-            <label for="">Nom d'utilisateur</label>
-            <input type="text" name="nom_utilisateur" id="nom_utilisateur" placeholder="Create a username">
-            <br>
-            <label for="">Password</label>
-            <input type="password" name="pass1" id="pass1" placeholder="Create a Password">
-            
+        <small><a href="#">Mot de passe oublier ?</a></small> <br>
+        <input type="submit" class="btn btn-primary mt-4" value="Login">
+        <div class="text-center text-primary fw-bold">
+            <small>Nouveau Utilisateur? <a href="#"
+            class="text-danger">Créer un nouveau Compte</a> </small>
         </div>
-        <input id="" class="btn w-100 btn-success btn-block" type="submit" value="Login">
-    </form>
-   
-</section>
-<br><br><br><br><br><br><br>
-{%endblock%}
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p> 
+            {% endfor %}
+        {% endif %}
+      </form>
+     </div>
+    </div>
+</div>     
+{% endblock content %}

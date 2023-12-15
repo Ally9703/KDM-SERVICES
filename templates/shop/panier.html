@@ -23,8 +23,12 @@
                         <th>
                             <a style="float: right; margin:5px" href="{% url 'shop:commande' %}"
                                 class=" btn-success">
-                                Vérifier</a>
+                                Acheter</a>
+                                <a href="#" class=" btn btn-sm btn-secondary mr-3" data-produit={{article.produit.pk}}
+                                data-action="clear">Remove item </a>
                         </th>
+
+                
                     </tr>
                 </table>
             </div>
@@ -57,8 +61,12 @@
                             <img class="chg-quantite update-panier update-panier" data-produit={{article.produit.pk}}
                                 data-action="remove" src="{% static 'images/arrow-down.png' %}" alt="">
                         </div>
+
+                        
+
                     </div>
                     <div style="flex:1" class="name">${{article.get_total}}</div>
+                   
                 </div>
             {%endfor%}
 

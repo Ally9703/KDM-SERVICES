@@ -34,12 +34,19 @@ for (var i = 0; i < produitBtns.length; i++){
                 delete panier[produitId];
             }
         }
-    
+
+        if(action == "clear"){
+            panier = {};
+        }
+
+
         document.cookie = "panier=" + JSON.stringify(panier) + ";domain=;path=/";
     
         console.log(panier);
         location.reload();
     }
+
+    
 
     function updateUserCommande(produit, action){
 
@@ -64,4 +71,31 @@ for (var i = 0; i < produitBtns.length; i++){
             location.reload();
         })
     }
+
+    function clearPanier(){
+        if( user == "AnonymousUser" ){
+            panier = {};
+            document.cookie = "panier=" + JSON.stringify(panier) + ";domain=;path=/";
+            location.reload();
+        }
+        else{
+            var url = '/clear_panier/';
+            fetch(url, {
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken' : csrftoken
+                },
+                body:JSON.stringify({'action': 'clear'})
+            })
+            .then((response) =>{
+                return response.json();
+            })
+            .then((data) =>{
+                console.log('data', data);
+                location.reload();
+            })
+        }
+    }
+    
 }
