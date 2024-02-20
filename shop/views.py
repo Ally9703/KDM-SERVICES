@@ -7,10 +7,14 @@ from django.shortcuts import redirect
 from .models import *
 from django.http import JsonResponse
 import json
+
 #from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from .utile import *
+
+
+
 
 
 # Page de Shop (Page d'accueil)
@@ -202,11 +206,16 @@ def traitement_commande(request,*args, **kwargs):
         client = request.user.client
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
         total = float(data['form']['total'])
-        commande.transaction_id = transaction_id
+        commande.transaction_id = data['payment_info']['transaction_id']
+        commande.total_trans = data['payment_info']['total']
 
         if commande.get_panier_total == total:
             commande.complete = True
-        commande.save()
+            commande.status = data['payment_info']['status']
+        else:
+            commande.status = "REFUSED"
+            commande.save()
+            return JsonResponse("Attention!!! Traitement Refuse Fraude detecte!", safe=False)
 
         # Vérifier si la commande est physique
         if commande.produit_physique:

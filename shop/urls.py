@@ -16,4 +16,9 @@ urlpatterns = [
     path('traitement_commande/', views.traitement_commande, name="traitement_commande"),
     path('carousel/', views.carousel, name="carousel"),
    
+
+   #login authentication
+    #path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
+    #path('accounts/login/', auth_view.LoginView.as_view(template_name='shop/login.html', authentication_form=LoginForm) , name='login'),
+    
 ]

@@ -20,26 +20,25 @@ def panier_cookie(request):
     try:
 
         for obj in panier:
+
             nombre_article += panier[obj]['qte']
-
             produit = Produit.objects.get(id=obj)
-
             total = (produit.price * panier[obj]['qte'])
-
             commande['get_panier_article'] += panier[obj]['qte']
-
             commande['get_panier_total'] += total
 
             article = {
+
                 'produit':{
-                    'id': produit.id,
-                    'name': produit.name,
-                    'price': produit.price,
+                    'id'      : produit.id,
+                    'name'    : produit.name,
+                    'price'   : produit.price,
                     'imageUrl': produit.imageUrl
                 },
 
-                'quantite': panier[obj]['qte'],
-                'get_total': total
+                'quantite'    : panier[obj]['qte'],
+                'get_total'   : total
+
             }
 
             articles.append(article)
@@ -51,8 +50,8 @@ def panier_cookie(request):
         pass 
 
     context = {
-        'articles': articles,
-        'commande': commande,
+        'articles'      : articles,
+        'commande'      : commande,
         'nombre_article': nombre_article
     }           
 
@@ -64,12 +63,8 @@ def data_cookie(request):
     if request.user.is_authenticated:
 
         client = request.user.client
-
         commande, created = Commande.objects.get_or_create(client=client, complete=False)
-
         articles = commande.commandearticle_set.all()
-
-   
         nombre_article = commande.get_panier_article
 
     else:
@@ -80,8 +75,8 @@ def data_cookie(request):
         nombre_article = cookie_panier['nombre_article']
 
     context = {
-        'articles': articles,
-        'commande': commande,
+        'articles'      : articles,
+        'commande'      : commande,
         'nombre_article': nombre_article
     }
 

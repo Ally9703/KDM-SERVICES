@@ -3,24 +3,12 @@ from django.contrib.auth.models import User
 #from django.utils import timezone
 
 
-
-
-class Customer(models.Model):
-    user = models.ForeignKey(User,on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
-    locality = models.CharField(max_length=200)
-    city = models.CharField(max_length=50)
-    mobile = models.IntegerField(default=0)
-    zipcode = models.IntegerField()
-    #state = models.CharField(choices=STATE_CHOICES,max_length=100)
-    def __str__(self):
-        return self.name
-    
-        
+       
 # Classe Client
 class Client(models.Model):
-    #user = models.OneToOneField(User, null=True, blank=True, on_delete=models.SET_NULL, related_name='client')
-    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    #user = models.OneToOneField(User, null=True, blank=True, on_delete=models.SET_NULL)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    #user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(max_length=100, null=True)
     email = models.EmailField(max_length=200, null=True)
 
@@ -54,7 +42,7 @@ class Produit(models.Model):
     def __str__(self):
         return self.name 
     
-    # Ajout et gestiion des produits sans images
+    # Ajout et gestion des produits sans images
     @property
     def imageUrl(self):
         try:

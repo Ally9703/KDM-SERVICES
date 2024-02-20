@@ -33,8 +33,11 @@
 
             <div class="box-element hidden " id="payment-info">
                 <small>Veillez choissir le Mode de paiement</small>
-                <!-- <div id="paypal-button-container"></div> -->
-                <button class="btn-success w-100 " id="make-payment">Effectuer lee paiement</button>
+                <center class="bg-info my-3"><buttonon onclick="checkout()">
+                    <img src="{% static 'images/freshpay.png' %}" alt="">
+                </button></center>
+                 <div id="paypal-button-container"></div> 
+                <!--<button class="btn-success w-100 " id="make-payment">Effectuer lee paiement</button>-->
             </div>
         </form>
 
@@ -69,7 +72,86 @@
 
 </section>
 
-<!-- Logique Javascript-->
+
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AZ0eZylbqLFaIEyWfH74MMFdCYRiR9PgIVKXjJiReDinExGn6ugJD1qFPge5bT_doUFj3Fu8Eil0DvPJ&currency=USD"></script>
+
+<script>
+    var total = parseFloat('{{commande.get_panier_total}}').toFixed(2);
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({
+        
+        style:{
+           color: 'blue',
+           shape: 'rect',
+        },
+        // Set up the transaction
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: total
+                    }
+                }]
+            });
+        },
+
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+                // Successful capture! For demo purposes:
+                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                var transaction = orderData.purchase_units[0].payments.captures[0];
+                submitFormData(transaction.id, transaction.status);
+
+                // Replace the above to show a success message within this page, e.g.
+                // const element = document.getElementById('paypal-button-container');
+                // element.innerHTML = '';
+                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                // Or go to another URL:  actions.redirect('thank_you.html');
+            });
+        }
+
+
+    }).render('#paypal-button-container');
+</script>
+
+
+<!-- Integration freshpay-->
+<script>
+
+    var request = require('request');
+    var options = {
+        'method': 'POST',
+        'url': 'https://paydrc.gofreshbakery.net/api/v5/',
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+
+    body: JSON.stringify({
+
+        "merchant_id": "jwHfjdopenc3yt$Tb",
+        "merchant_secrete": "jz5ulzR!a54kGg!iF",
+        "amount": "100",
+        "currency": "CDF",
+        "action": "debit",
+        "customer_number": "0998912287",
+        "firstname": "SupportTest",
+        "lastname": "SupportTest",
+        "e-mail": "support@gofreshbakery.com",
+        "reference": "test",
+        "method": "airtel"
+
+    })
+
+    };
+    request(options, function (error, response) {
+    if (error) throw new Error(error);
+        console.log(response.body);
+    });
+    
+</script>
+
 
 <script type="text/javascript">
     var total = parseFloat("{{commande.get_panier_total}}");
@@ -96,11 +178,18 @@
         document.getElementById('payment-info').classList.remove('hidden');
     })
 
-    document.getElementById('make-payment').addEventListener('click', function (e) {
-        submitFromData();
-    })
-    function submitFromData() {
+    //document.getElementById('make-payment').addEventListener('click', function (e) {
+    //  submitFromData();
+    //})
+
+    function submitFromData(transaction_id, status) {
         //console.log('Traitement commande en cours');
+        paymentInfo = {
+            'transaction_id': transaction_id,
+            'status': status,
+            'total':total
+        }
+
         var userFormData = {
             'name': null,
             'username': null,
@@ -140,7 +229,7 @@
                 "Content-Type": "application/json",
                 "X-CSRFToken": csrftoken
             },
-            body: JSON.stringify({ "form": userFormData, "shipping": shippingUserInfo })
+            body: JSON.stringify({ "form": userFormData, "shipping": shippingUserInfo, 'payment_info':paymentInfo })
         })
 
         .then((response) => {
