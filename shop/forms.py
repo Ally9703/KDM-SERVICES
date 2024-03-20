@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm,UsernameField, PasswordChangeForm, SetPasswordForm, PasswordResetForm
 from django.contrib.auth.models import User
 
-from .models import Customer
+from .models import Client
 
 class LoginForm(AuthenticationForm):
     username = UsernameField(widget=forms.TextInput(attrs={'autofocus ':'True','class':'form-control'}))
@@ -33,7 +33,7 @@ class MySetPasswordForm(SetPasswordForm):
 
 class CustomerProfileForm(forms.ModelForm):
     class Meta:
-        model = Customer
+        model = Client
         fields=['name','locality','city','mobile','state','zipcode', 'photo']
         widgets={
             'name':forms.TextInput(attrs={'class':'form-control'}),
