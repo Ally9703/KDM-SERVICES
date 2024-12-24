@@ -145,158 +145,6 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "authenticate",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "authenticate",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "shop",
-        "description": "shop",
-        "isExtraImport": true,
-        "detail": "shop",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -362,6 +210,22 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "forms",
         "importPath": "django",
         "description": "django",
@@ -418,12 +282,140 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "json",
         "description": "json",
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -448,6 +440,14 @@
         "description": "django.contrib.auth.decorators",
         "isExtraImport": true,
         "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "shop",
+        "description": "shop",
+        "isExtraImport": true,
+        "detail": "shop",
         "documentation": {}
     },
     {
@@ -691,60 +691,6 @@
         "description": "Main.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "Main.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "UserauthConfig",
-        "kind": 6,
-        "importPath": "Userauth.apps",
-        "description": "Userauth.apps",
-        "peekOfCode": "class UserauthConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Userauth'",
-        "detail": "Userauth.apps",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "Userauth.urls",
-        "description": "Userauth.urls",
-        "peekOfCode": "app_name = \"auth\"\nurlpatterns = [\n    path('register/', views.register, name=\"register\"),\n    path('connexion/', views.connexion, name=\"connexion\"),\n    path('logout/', views.deconnexion, name=\"logout\"),\n    #path('test/', views.test, name=\"test\"),\n]",
-        "detail": "Userauth.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "Userauth.urls",
-        "description": "Userauth.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register, name=\"register\"),\n    path('connexion/', views.connexion, name=\"connexion\"),\n    path('logout/', views.deconnexion, name=\"logout\"),\n    #path('test/', views.test, name=\"test\"),\n]",
-        "detail": "Userauth.urls",
-        "documentation": {}
-    },
-    {
-        "label": "register",
-        "kind": 2,
-        "importPath": "Userauth.views",
-        "description": "Userauth.views",
-        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        nom_utilisateur  =  request.POST['nom_utilisateur']\n        prenom     =  request.POST['prenom']\n        nom     =  request.POST['nom']\n        email     =  request.POST['email']\n        pass1     =  request.POST['pass1']\n        pass2     =  request.POST['pass2']\n        utilisateur = User.objects.create_user(nom_utilisateur, email, pass1)\n        utilisateur.first_name  = prenom",
-        "detail": "Userauth.views",
-        "documentation": {}
-    },
-    {
-        "label": "connexion",
-        "kind": 2,
-        "importPath": "Userauth.views",
-        "description": "Userauth.views",
-        "peekOfCode": "def connexion(request):\n    if request.method == \"POST\":\n        nom_utilisateur = request.POST['nom_utilisateur']\n        pass1    = request.POST['pass1']\n        user = authenticate(request, nom_utilisateur=nom_utilisateur, password=pass1)\n        if user is not None:\n            login(request, user)\n            messages.success(request,('Vous êtes connecté'))\n            return redirect('shop:shop')\n            #return render(request, \"userauth/test.html\")    ",
-        "detail": "Userauth.views",
-        "documentation": {}
-    },
-    {
-        "label": "deconnexion",
-        "kind": 2,
-        "importPath": "Userauth.views",
-        "description": "Userauth.views",
-        "peekOfCode": "def deconnexion(request):\n    logout(request)\n    messages.success(request, (\"deconnexion\"))\n    return redirect('auth:connexion')",
-        "detail": "Userauth.views",
         "documentation": {}
     },
     {
@@ -1096,6 +1042,60 @@
         "description": "shop.views",
         "peekOfCode": "def carousel(request, *args, **kwargs):\n    context={}\n    return render(request, 'shop/carousel.html', context)",
         "detail": "shop.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserauthConfig",
+        "kind": 6,
+        "importPath": "Userauth.apps",
+        "description": "Userauth.apps",
+        "peekOfCode": "class UserauthConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Userauth'",
+        "detail": "Userauth.apps",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "Userauth.urls",
+        "description": "Userauth.urls",
+        "peekOfCode": "app_name = \"auth\"\nurlpatterns = [\n    path('register/', views.register, name=\"register\"),\n    path('connexion/', views.connexion, name=\"connexion\"),\n    path('logout/', views.deconnexion, name=\"logout\"),\n    #path('test/', views.test, name=\"test\"),\n]",
+        "detail": "Userauth.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Userauth.urls",
+        "description": "Userauth.urls",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.register, name=\"register\"),\n    path('connexion/', views.connexion, name=\"connexion\"),\n    path('logout/', views.deconnexion, name=\"logout\"),\n    #path('test/', views.test, name=\"test\"),\n]",
+        "detail": "Userauth.urls",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "Userauth.views",
+        "description": "Userauth.views",
+        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        nom_utilisateur  =  request.POST['nom_utilisateur']\n        prenom     =  request.POST['prenom']\n        nom     =  request.POST['nom']\n        email     =  request.POST['email']\n        pass1     =  request.POST['pass1']\n        pass2     =  request.POST['pass2']\n        utilisateur = User.objects.create_user(nom_utilisateur, email, pass1)\n        utilisateur.first_name  = prenom",
+        "detail": "Userauth.views",
+        "documentation": {}
+    },
+    {
+        "label": "connexion",
+        "kind": 2,
+        "importPath": "Userauth.views",
+        "description": "Userauth.views",
+        "peekOfCode": "def connexion(request):\n    if request.method == \"POST\":\n        nom_utilisateur = request.POST['nom_utilisateur']\n        pass1    = request.POST['pass1']\n        user = authenticate(request, nom_utilisateur=nom_utilisateur, password=pass1)\n        if user is not None:\n            login(request, user)\n            messages.success(request,('Vous êtes connecté'))\n            return redirect('shop:shop')\n            #return render(request, \"userauth/test.html\")    ",
+        "detail": "Userauth.views",
+        "documentation": {}
+    },
+    {
+        "label": "deconnexion",
+        "kind": 2,
+        "importPath": "Userauth.views",
+        "description": "Userauth.views",
+        "peekOfCode": "def deconnexion(request):\n    logout(request)\n    messages.success(request, (\"deconnexion\"))\n    return redirect('auth:connexion')",
+        "detail": "Userauth.views",
         "documentation": {}
     },
     {
